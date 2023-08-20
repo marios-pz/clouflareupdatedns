@@ -1,2 +1,2 @@
-# clouflare-update-dns
+# clouflareupdatedns
 Update DNS Records easily

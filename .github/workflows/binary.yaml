@@ -32,13 +32,12 @@ jobs:
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.BASEMENT_TOKEN }}
         with:
           tag_name: v${{ github.run_number }}
           release_name: Release v${{ github.run_number }}
           draft: false
           prerelease: false
+          token: ${{ secrets.BASEMENT_TOKEN }}
 
       - name: Upload Binary
         uses: actions/upload-artifact@v2
